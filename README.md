@@ -22,6 +22,10 @@ Curso sobre Quarto, Zotero e R para investigação reproduzível em saúde. FMUP
 
    Abre um separador novo com o documento do curso. Navega pelo índice à esquerda.
 
+   Quando renderizares um PDF (exercício 3), carrega duas vezes no ficheiro `.pdf` no painel de ficheiros à esquerda — abre num visualizador de PDF dentro do próprio Codespace, sem precisares de descarregar nada.
+
+   Os slides de abertura estão em `presentation/slides.html` (também [online](https://tiagojct.eu/quarto-odissey/slides/)) — não são necessários para os exercícios, só para acompanhar a introdução.
+
 ## Estrutura
 
 ```
@@ -30,13 +34,16 @@ Curso sobre Quarto, Zotero e R para investigação reproduzível em saúde. FMUP
 │   ├── course.qmd                  # Documento do curso (Quarto HTML)
 │   ├── theme.scss                  # Tema visual (paleta do poster)
 │   └── images/                     # Poster e outras imagens
+├── presentation/
+│   └── slides.qmd                  # Slides de abertura (Quarto reveal.js)
 └── exercises/
     ├── 01-zotero/                  # Biblioteca Zotero + Better BibTeX (local)
     ├── 02-quarto-analysis/         # Quarto + R chunks (no Codespace)
     │   ├── data/cohort-asma.csv
     │   └── template/
     │       ├── manuscript.qmd
-    │       └── references.bib
+    │       ├── references.bib
+    │       └── vancouver.csl, nature.csl
     └── 03-writing-export/          # Citações + exportação para .docx/PDF/HTML
 ```
 

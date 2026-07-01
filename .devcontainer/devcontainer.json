@@ -21,7 +21,8 @@
       "extensions": [
         "quarto.quarto",
         "reditorsupport.r",
-        "rdebugger.r-debugger"
+        "rdebugger.r-debugger",
+        "tomoki1207.pdf"
       ],
       "settings": {
         "editor.formatOnSave": false,

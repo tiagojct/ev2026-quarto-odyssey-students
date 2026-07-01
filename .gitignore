@@ -2,6 +2,7 @@ _site/
 .quarto/
 *.html
 !course/*.html
+!presentation/*.html
 __pycache__/
 *.pyc
 .DS_Store
@@ -13,6 +14,8 @@ __pycache__/
 *_files/
 !course/course_files/
 !course/course_files/**
+!presentation/slides_files/
+!presentation/slides_files/**
 *_cache/
 *.docx
 *.pdf

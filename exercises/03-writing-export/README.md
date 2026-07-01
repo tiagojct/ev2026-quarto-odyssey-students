@@ -93,6 +93,49 @@ quarto render manuscript.qmd --to html
 
 Repara como **todas** as citações e a bibliografia mudam de Vancouver para Nature, sem editares uma única linha do texto.
 
+### 9. Bónus (opcional) — diagrama de fluxo STROBE
+
+O `manuscript.qmd` já tem a extensão [`quarto-study-flow`](https://github.com/tiagojct/quarto-study-flow) instalada (`_extensions/`). É uma ferramenta do próprio instrutor: gera diagramas de fluxo de participantes (CONSORT, STROBE, PRISMA, TRIPOD+AI, STARD) a partir de YAML, em SVG para HTML e TikZ nativo para PDF — útil para a tua tese ou artigo real, não só para este exercício.
+
+Como o nosso estudo é uma coorte descritiva, usa o tipo `strobe`. Acrescenta ao YAML do `manuscript.qmd` (fora do bloco `study-flow`, os números são inventados — ajusta-os à tua narrativa da secção Métodos):
+
+```yaml
+study-flow:
+  type: strobe
+  source:
+    label: "Doentes referenciados à consulta de pneumologia pediátrica"
+    n: 412
+  eligible:
+    label: "Elegíveis (5–17 anos, diagnóstico de asma confirmado)"
+    n: 248
+    excluded: 164
+    exclusion_reasons:
+      - "Fora do intervalo de idade: 71"
+      - "Diagnóstico não confirmado: 58"
+      - "Dados de espirometria incompletos: 35"
+  enrolled:
+    label: "Coorte final"
+    n: 200
+    excluded: 48
+    exclusion_reasons:
+      - "Consentimento não obtido: 30"
+      - "Perda de seguimento antes da primeira avaliação: 18"
+```
+
+Depois, na secção `# Métodos`, adiciona o diagrama como figura com legenda e referência cruzada:
+
+```markdown
+::: {#fig-flow}
+{{< study-flow >}}
+
+Fluxo de participantes, segundo o STROBE.
+:::
+
+O processo de selecção da amostra está ilustrado na @fig-flow.
+```
+
+Re-renderiza para HTML e PDF. Repara que o mesmo YAML produz SVG no HTML e TikZ nativo no PDF, sem mudares nada no `.qmd`.
+
 ## Output esperado
 
 - `manuscript.html` com bibliografia formatada e cross-references resolvidas.

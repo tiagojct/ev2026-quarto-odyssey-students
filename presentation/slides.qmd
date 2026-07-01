@@ -1,0 +1,175 @@
+---
+title: "2001: A Quarto Odyssey"
+subtitle: "I'm sorry Dave, Word can't do that"
+author: "Tiago Jacinto"
+institute: "FMUP · CINTESIS/RISE-Health"
+date: 2026-07-03
+date-format: "D [de] MMMM [de] YYYY"
+lang: pt-PT
+format:
+  fmup-revealjs:
+    footer: "2001: A Quarto Odyssey · Escola de Verão FMUP/MEDCIDS 2026"
+    slide-number: c/t
+    chalkboard: false
+    incremental: false
+---
+
+## Agenda
+
+- O problema: três ferramentas que não comunicam
+- Parte I — Zotero + Better BibTeX
+- Parte II — Quarto + R
+- Parte III — Escrita e exportação
+- Princípios FAIR
+- Próximos passos
+
+## O problema
+
+Um investigador em saúde faz três coisas repetidamente: **gere referências**, **analisa dados**, **escreve**.
+
+Na maioria dos casos, em três ferramentas separadas que não comunicam entre si.
+
+Zotero num canto, RStudio noutro, Word num terceiro.
+
+## O resultado é previsível
+
+- Ficheiros duplicados
+- Referências desactualizadas
+- Tabelas copiadas à mão de um lado para o outro
+- Formatações refeitas cada vez que o documento muda de destino
+
+[O número típico de versões diferentes de um manuscrito em circulação durante a revisão por pares: **5 a 8**.]{.column-margin}
+
+## Word vs Quarto
+
+| Cenário | Word | Quarto |
+|---|---|---|
+| Muda um dado | Refazer tabela à mão | Re-renderiza sozinho |
+| Muda o estilo de citação | 1–3 horas | Uma linha no YAML, segundos |
+| Submeter noutro formato | Reformatar tudo | `format: [docx, pdf, html]` |
+| Rever o que mudou | Comparar visualmente | `git diff` — texto simples |
+
+## O que vais conseguir fazer ao fim do dia
+
+- Configurar Zotero + Better BibTeX para *cite keys* estáveis
+- Adicionar referências por cinco vias diferentes
+- Verificar retracções com o Retraction Watch
+- Escrever um `.qmd` com YAML, Markdown e código R
+- Produzir tabelas e gráficos que se actualizam com os dados
+- Exportar para `.docx`, PDF e HTML — e mudar de estilo em segundos
+
+# Parte I — Zotero + Better BibTeX {.center}
+
+## Cinco formas de adicionar referências
+
+1. Conector do navegador
+2. DOI ou PMID (*magic wand*)
+3. *Drag-and-drop* de PDF
+4. Entrada manual
+5. Importação `.bib`/`.ris`
+
+## Better BibTeX
+
+*Cite keys* estáveis (`silva2024asthma`, não um código aleatório) e exportação automática da biblioteca para `.bib`.
+
+::: {.callout-warning}
+## Regra inegociável
+
+Verifica sempre se um artigo foi **retractado** antes de o citares. O Zotero mostra um aviso vermelho; o Retraction Watch mantém a base de dados.
+:::
+
+# Parte II — Quarto + R {.center}
+
+## Um projecto, pastas simples
+
+```
+o-meu-artigo/
+├── manuscript.qmd
+├── references.bib
+├── data/
+│   └── cohort.csv
+└── output/
+    ├── manuscript.docx
+    ├── manuscript.pdf
+    └── manuscript.html
+```
+
+Caminhos **relativos**, sempre. `data/cohort.csv`, nunca `C:\Users\...`.
+
+## Código R dentro do documento
+
+````markdown
+```{{r}}
+#| label: tbl-demographics
+#| tbl-cap: "Características da amostra"
+
+cohort |>
+  group_by(sex) |>
+  summarise(n = n(), idade = mean(age)) |>
+  gt()
+```
+````
+
+A tabela actualiza-se sozinha sempre que `cohort.csv` muda.
+
+## Tabelas e gráficos, cross-references automáticas
+
+- `knitr::kable()` ou `gt()` para tabelas
+- `ggplot2` para gráficos
+- `@tbl-demographics`, `@fig-fev1-age` — referências no texto que se actualizam sozinhas se reordenares o documento
+
+# Parte III — Escrita e exportação {.center}
+
+## Citações em segundos
+
+```yaml
+bibliography: references.bib
+csl: vancouver.csl
+```
+
+`@silva2024asthma` → Silva (2024). Muda `csl: nature.csl`, re-renderiza — **toda** a bibliografia muda de estilo, sem tocar no texto.
+
+## Um ficheiro, três formatos
+
+```yaml
+format:
+  html: default
+  docx: default
+  pdf:
+    documentclass: scrartcl
+```
+
+`.docx` para colaborar com co-autores, PDF para arquivar, HTML para partilhar — todos do mesmo `manuscript.qmd`.
+
+## Princípios FAIR
+
+**F**indable · **A**ccessible · **I**nteroperable · **R**eusable
+
+Um projecto Quarto bem organizado — dados, código, texto separados, tudo em texto simples, tudo em Git — cumpre estes princípios quase por construção.
+
+## Próximos passos
+
+- Controlo de versões com **Git**
+- **`renv`** para fixar versões de pacotes R
+- **Positron**, sucessor do RStudio
+- Templates de revistas e extensões Quarto
+
+# Porquê "2001: A Quarto Odyssey"? {.center}
+
+## Uma referência, não um requisito
+
+O nome é um trocadilho com *2001: A Space Odyssey* (Kubrick, 1968) — o computador de bordo **HAL 9000**, que falha e complica a missão.
+
+O subtítulo reescreve a frase mais famosa do filme: *"I'm sorry, Dave. I'm afraid I can't do that."*
+
+É o que o Word te diz, em silêncio, sempre que tentas fazer algo reprodutível lá dentro.
+
+Não precisas de ter visto o filme. Mas depois de hoje, talvez valha a pena.
+
+## Vamos começar
+
+Abre o `course/course.qmd` no teu Codespace — é o guião de hoje, e fica contigo depois.
+
+[github.com/tiagojct/ev2026-quarto-odyssey-students](https://github.com/tiagojct/ev2026-quarto-odyssey-students)
+
+Tiago Jacinto · FMUP / CINTESIS–RISE-Health

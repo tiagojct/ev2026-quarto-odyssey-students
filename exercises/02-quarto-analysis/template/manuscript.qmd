@@ -64,6 +64,9 @@ execute:
 > - *Pelo menos uma referência ao método estatístico usado.*
 >
 > *Referencia as tabelas e figuras com `@tbl-demographics` e `@fig-fev1-age`.*
+>
+> *Bónus (opcional, ver exercício 3): gera um diagrama de fluxo STROBE da*
+> *coorte com a extensão `quarto-study-flow` e referencia-o com `@fig-flow`.*
 
 # Resultados
 
