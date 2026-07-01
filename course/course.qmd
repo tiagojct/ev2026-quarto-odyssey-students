@@ -229,7 +229,15 @@ Nos teus projectos reais, com dados de doentes, aplicam-se regras diferentes:
 
 # Zotero e Better BibTeX
 
-O [Zotero](https://www.zotero.org) é o gestor de referências que vais usar. É *open source*, é gratuito, e tem aplicação desktop (Windows, macOS, Linux) mais sincronização com a biblioteca *online*.
+O [Zotero](https://www.zotero.org) é o gestor de referências que vais usar. É *open source*, é gratuito, e tem aplicação desktop (Windows, macOS, Linux) mais sincronização com a biblioteca *online*. Resolve um problema concreto: guardar, organizar e citar centenas (ou milhares) de artigos sem depender de pastas de PDFs com nomes como `artigo_final_v2.pdf`.
+
+Por dentro, o Zotero guarda três coisas por cada referência: os **metadados** (autores, título, ano, DOI — o que vai para a bibliografia), os **anexos** (o PDF, se tiveres acesso), e as tuas **anotações** (destaques, notas). Tudo isto sincroniza entre computadores e integra directamente com o Word, o LibreOffice, e — o que interessa aqui — com o Quarto.
+
+::: {.callout-note}
+## Zotero vs Mendeley vs EndNote
+
+Os três fazem o essencial (guardar referências, inserir citações). O Zotero destaca-se em três pontos para um fluxo Quarto: é gratuito sem limite de armazenamento para metadados (só os PDFs contam para a quota), tem o [Better BibTeX](https://retorque.re/zotero-better-bibtex/) — que nenhum dos outros replica de forma equivalente — e o [Retraction Watch Database](https://retractionwatch.com/retraction-watch-database/) vem integrado desde 2022. Se já usas Mendeley ou EndNote, a [importação para Zotero](https://www.zotero.org/support/moving_to_zotero) é directa.
+:::
 
 ## Cinco formas de adicionar referências
 
