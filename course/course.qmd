@@ -849,10 +849,6 @@ Para aprofundar depois do curso:
 - [Wilkinson et al. 2016 — FAIR Guiding Principles](https://doi.org/10.1038/sdata.2016.18).
 - [Goodman et al. 2016 — What does research reproducibility mean?](https://doi.org/10.1126/scitranslmed.aaf5027).
 
-**Workshops relacionados:**
-
-- [The Promptfather](https://github.com/tiagojct/promptfather-lab) — workshop irmão deste, sobre agentes de IA na linha de comandos para investigação em saúde.
-
 **Tutoriais relacionados (Tiago Jacinto):**
 
 - [RStudio: Best practices for scientific work](https://tiagojct.eu/notes/rst-bp/).

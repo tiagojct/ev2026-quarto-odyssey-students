@@ -14,7 +14,7 @@ Completar um documento `.qmd` parcialmente preenchido com blocos de código R qu
 
 `exercises/02-quarto-analysis/data/cohort-asma.csv` — cerca de 200 doentes pediátricos com asma, com 8 variáveis: `patient_id`, `age`, `sex`, `height_cm`, `weight_kg`, `fev1_l`, `fvc_l`, `asthma_severity`.
 
-Os dados são sintéticos e limpos — sem missing, sem valores impossíveis. O objectivo aqui não é qualidade de dados (isso é o workshop *Promptfather*), é demonstrar como o código R dentro de um `.qmd` produz tabelas e gráficos.
+Os dados são sintéticos e limpos — sem missing, sem valores impossíveis. O objectivo aqui não é qualidade de dados, é demonstrar como o código R dentro de um `.qmd` produz tabelas e gráficos.
 
 ## Passos
 
