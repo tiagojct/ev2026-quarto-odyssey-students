@@ -24,7 +24,7 @@ Curso sobre Quarto, Zotero e R para investigação reproduzível em saúde. FMUP
 
    Quando renderizares um PDF (exercício 3), carrega duas vezes no ficheiro `.pdf` no painel de ficheiros à esquerda — abre num visualizador de PDF dentro do próprio Codespace, sem precisares de descarregar nada.
 
-   Os slides de abertura estão em `presentation/slides.html` (também [online](https://tiagojct.eu/quarto-odissey/slides/)) — não são necessários para os exercícios, só para acompanhar a introdução.
+   Os slides de abertura ficam em `presentation/slides.qmd` — renderiza-os com `quarto preview presentation/slides.qmd` se quiseres a versão local, ou consulta directamente a versão [online](https://tiagojct.eu/quarto-odissey/slides/). Não são necessários para os exercícios, só para acompanhar a introdução.
 
 ## Estrutura
 
