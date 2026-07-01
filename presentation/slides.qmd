@@ -49,6 +49,18 @@ Zotero num canto, RStudio noutro, Word num terceiro.
 | Submeter noutro formato | Reformatar tudo | `format: [docx, pdf, html]` |
 | Rever o que mudou | Comparar visualmente | `git diff` — texto simples |
 
+## O que é o Quarto
+
+[Quarto](https://quarto.org) — sistema *open source* de publicação científica.
+
+Junta três coisas que normalmente vivem separadas:
+
+- Texto em **Markdown**
+- Código **R** (ou Python, Julia) que corre quando renderizas
+- **Citações** geridas pelo Zotero
+
+Um ficheiro `.qmd` → `.docx`, PDF, ou HTML, à escolha.
+
 ## O que vais conseguir fazer ao fim do dia
 
 - Configurar Zotero + Better BibTeX para *cite keys* estáveis
@@ -59,6 +71,18 @@ Zotero num canto, RStudio noutro, Word num terceiro.
 - Exportar para `.docx`, PDF e HTML — e mudar de estilo em segundos
 
 # Parte I — Zotero + Better BibTeX {.center}
+
+## O que é o Zotero
+
+[Zotero](https://www.zotero.org) — gestor de referências. *Open source*, gratuito, aplicação *desktop* + sincronização *online*.
+
+Guarda três coisas por referência:
+
+- **Metadados** (autores, título, DOI)
+- **Anexos** (o PDF)
+- **Anotações** (destaques, notas)
+
+Integra directamente com o Quarto — sem copiar e colar.
 
 ## Cinco formas de adicionar referências
 
