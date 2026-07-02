@@ -50,9 +50,9 @@ execute:
 >
 > Sintaxe de citação:
 >
-> - `@silva2024asthma` → "Silva (2024)"
-> - `[@silva2024asthma]` → "(Silva, 2024)" ou "(1)" em Vancouver
-> - `[@silva2024asthma; @ho2023]` → combina citações
+> - `@papi2018asthma` → "Papi et al. (2018)"
+> - `[@papi2018asthma]` → "(Papi et al., 2018)" ou "(1)" em Vancouver
+> - `[@papi2018asthma; @quanjer2012multi]` → combina citações
 
 # Métodos
 

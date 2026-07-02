@@ -32,10 +32,10 @@ Na secção `# Introdução` (vais ter de a criar antes do `# Métodos` no `.qmd
 
 Sintaxe de citação:
 
-- `@silva2024asthma` produz "Silva (2024)".
-- `[@silva2024asthma]` produz "(Silva, 2024)" ou "(1)" consoante o estilo.
-- `[-@silva2024asthma]` produz apenas "2024" (útil para "Silva [@-silva2024asthma] estudou...").
-- `[@silva2024asthma; @ho2023]` combina duas citações.
+- `@papi2018asthma` produz "Papi et al. (2018)".
+- `[@papi2018asthma]` produz "(Papi et al., 2018)" ou "(1)" consoante o estilo.
+- `[-@papi2018asthma]` produz apenas "2018" (útil para "Papi et al. [@-papi2018asthma] estudaram...").
+- `[@papi2018asthma; @quanjer2012multi]` combina duas citações.
 
 Para usar o selector visual em vez de decorar *cite keys*:
 

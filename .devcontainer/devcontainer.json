@@ -43,5 +43,5 @@
       ]
     }
   },
-  "postCreateCommand": "R -e 'install.packages(c(\"tidyverse\", \"gt\", \"ggplot2\", \"knitr\", \"rmarkdown\"), repos=\"https://cloud.r-project.org\")' 2>/dev/null || echo 'R packages already installed via rocker image'"
+  "postCreateCommand": "R -q -e 'p <- c(\"tidyverse\",\"gt\",\"ggplot2\",\"knitr\",\"rmarkdown\"); m <- setdiff(p, rownames(installed.packages())); if (length(m)) install.packages(m, repos=\"https://cloud.r-project.org\") else cat(\"All required R packages already present\\n\")'"
 }
