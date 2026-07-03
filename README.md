@@ -14,7 +14,7 @@ A course on Quarto, Zotero and R for reproducible research in health. FMUP / MED
 2. Get the materials: `git clone https://github.com/tiagojct/quarto-odyssey-lab.git`, or **Code → Download ZIP**, or **Use this template** to copy it to your own account.
 3. Open `quarto-odyssey.Rproj` in RStudio, then install the R packages the exercises need — in the RStudio Console run `source("setup.R")` (or paste `install.packages(c("tidyverse", "gt", "knitr", "rmarkdown"))`). It only installs what's missing.
 4. Open `course/course.qmd` and click **Render** (or run `quarto preview course/course.qmd` in the RStudio Terminal). It opens the course in your browser; use the table of contents on the left.
-5. When you render a PDF (exercise 3), double-click the rendered `.pdf` in RStudio's **Files** pane to open it in a viewer. The opening slides live in `presentation/slides.qmd` — render them with `quarto preview presentation/slides.qmd` for the local version, or view the [online](https://tiagojct.eu/quarto-odissey/slides/) version directly. They are not required for the exercises, only to follow along with the introduction.
+5. When you render a PDF (exercise 3), double-click the rendered `.pdf` in RStudio's **Files** pane to open it in a viewer.
 
 **Fallback: no local install?** The repo ships a `.devcontainer`, so you can open it in **GitHub Codespaces** instead (**Code → Codespaces → Create codespace on main**).
 
@@ -28,8 +28,6 @@ A course on Quarto, Zotero and R for reproducible research in health. FMUP / MED
 │   ├── course.qmd                  # Course document (Quarto HTML)
 │   ├── theme.scss                  # Visual theme (poster palette)
 │   └── images/                     # Poster and other images
-├── presentation/
-│   └── slides.qmd                  # Opening slides (Quarto reveal.js)
 └── exercises/
     ├── 01-zotero/                  # Zotero library + Better BibTeX (local)
     │   └── starter-files/          # Example PDF + .bib, optional
